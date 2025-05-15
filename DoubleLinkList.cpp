@@ -101,5 +101,21 @@ class DoubleLinkedList
                     current = current->next;
                 
                 if (current == NULL)
+                {
+                    cout << "Record not found" << endl;
+                    return;
+                }
+
+                //step 2: if node is at the beginning
+                if (current == START)
+                {
+                    START = current->next; //step 2A: START = START.next
+                    if (START != NULL)
+                        START->prev = NULL; //step 2B: START.prev = NULL
+                }
+                else
+                {
+                    
+                }
             }
 };
